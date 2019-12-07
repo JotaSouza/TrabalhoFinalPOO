@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="411.0" prefWidth="544.0" style="-fx-background-color: #d3c171;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sequenciadorPianoViolao.ViolaoController">
+    <children>
+      <MenuBar layoutY="-5.0" prefHeight="32.0" prefWidth="598.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#manipulaCarregamento" text="Carregar Sequencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#manipulaSaveSequencia" text="Salvar Sequencia" />
+                  <MenuItem mnemonicParsing="false" text="Fechar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sobre">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#manipulaSobreViolao" text="Instruções do Violao Sequenciador" />
+                  <MenuItem mnemonicParsing="false" onAction="#manipulaSobreMim" text="Sobre o Desenvolvedor" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Instrumentos">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#manipulaTrocaInstrumento" text="Trocar Instrumento" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Circle fx:id="gravacaoHabilitada" fill="#b20909" layoutX="162.0" layoutY="126.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <TextArea fx:id="composicaoConteudo" layoutX="186.0" layoutY="152.0" prefHeight="51.0" prefWidth="217.0" />
+      <Button fx:id="playBtn" layoutX="270.0" layoutY="113.0" mnemonicParsing="false" onAction="#manipulaPlay" onMouseClicked="#manipulaPlay" text="Play" />
+      <Button fx:id="limparBtn" layoutX="348.0" layoutY="113.0" mnemonicParsing="false" onAction="#manipulaLimpa" text="Limpar" />
+      <Button fx:id="gravarBtn" layoutX="186.0" layoutY="113.0" mnemonicParsing="false" onAction="#manipulaGravacao" prefHeight="25.0" prefWidth="54.0" text="Gravar" />
+      <AnchorPane layoutY="215.0" prefHeight="227.0" prefWidth="586.0">
+         <children>
+            <Ellipse fx:id="C0" fill="#8cc8ff" layoutX="36.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="Db" fill="#8cc8ff" layoutX="80.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="Eb" fill="#8cc8ff" layoutX="168.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="D" fill="#8cc8ff" layoutX="124.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="F" fill="#8cc8ff" layoutX="256.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="E" fill="#8cc8ff" layoutX="212.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="Gb" fill="#8cc8ff" layoutX="300.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="G" fill="#8cc8ff" layoutX="344.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="Ab" fill="#8cc8ff" layoutX="388.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="A" fill="#8cc8ff" layoutX="432.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="Bb" fill="#8cc8ff" layoutX="476.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="B" fill="#8cc8ff" layoutX="520.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Ellipse fx:id="C1" fill="#8cc8ff" layoutX="564.0" layoutY="98.0" radiusX="22.0" radiusY="80.0" stroke="#fffdfd" strokeType="INSIDE" strokeWidth="0.0" />
+            <Label layoutX="22.0" layoutY="84.0" text="CMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="84.0" text="DbMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="110.0" layoutY="84.0" text="DMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="154.0" layoutY="84.0" text="EbMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="198.0" layoutY="84.0" text="EMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="242.0" layoutY="84.0" text="FMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="283.0" layoutY="84.0" text="GbMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="330.0" layoutY="84.0" text="GMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="371.0" layoutY="84.0" text="AbMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="84.0" text="AMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="462.0" layoutY="84.0" text="BbMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="506.0" layoutY="84.0" text="BMaj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="547.0" layoutY="84.0" text="C1Maj7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="-8.0" text="A" textFill="WHITE" />
+            <Label layoutX="74.0" layoutY="-8.0" text="W" textFill="WHITE" />
+            <Label layoutX="118.0" layoutY="-8.0" text="S" textFill="WHITE" />
+            <Label layoutX="208.0" layoutY="-7.0" text="D" textFill="WHITE" />
+            <Label layoutX="253.0" layoutY="-8.0" text="F" textFill="WHITE" />
+            <Label layoutX="335.0" layoutY="-9.0" prefHeight="17.0" prefWidth="12.0" text="G" textFill="WHITE" />
+            <Label layoutX="423.0" layoutY="-10.0" prefHeight="17.0" prefWidth="12.0" text="H" textFill="WHITE" />
+            <Label layoutX="473.0" layoutY="-9.0" prefHeight="17.0" prefWidth="12.0" text="U" textFill="WHITE" />
+            <Label layoutX="514.0" layoutY="-7.0" prefHeight="17.0" prefWidth="12.0" text="J" textFill="WHITE" />
+            <Label layoutX="558.0" layoutY="-7.0" prefHeight="17.0" prefWidth="12.0" text="K" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="164.0" layoutY="207.0" text="E" textFill="WHITE" />
+      <Label layoutX="294.0" layoutY="206.0" prefHeight="17.0" prefWidth="0.0" text="T" textFill="WHITE" />
+      <Label layoutX="382.0" layoutY="206.0" prefHeight="17.0" prefWidth="12.0" text="Y" textFill="WHITE" />
+      <AnchorPane layoutX="181.0" layoutY="146.0" prefHeight="68.0" prefWidth="224.0" />
+   </children>
+</AnchorPane>
